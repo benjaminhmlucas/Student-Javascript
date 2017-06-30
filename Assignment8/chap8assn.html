@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html style="background-color: violet">
+<head>
+	<title>Chapter 8 Assignment</title>
+	<script>
+		
+		function Person(name, age, gender)
+		{
+			this.fullName = name;
+			this.age = age*1;
+			this.gender = gender.toUpperCase();
+			this.expect = function()
+			{
+				if(this.gender == "M")
+				{
+					this.lifeExpect = 76 - this.age;
+					this.genderName = "male";
+				}
+				else if(this.gender == "F")
+				{
+					this.lifeExpect = 81 - this.age
+					this.genderName = "female";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<script>
+	var myPerson = new Person
+	(
+		prompt("Please Enter Full Name"),
+		prompt("Please Enter Age In Years"), 
+		prompt("Please Enter Gender: (M) for Male, (F) for Female")
+	);
+	document.write("<h1>Browser Settings:</h1>");
+	if(navigator.javaEnabled())
+	{
+		document.write("Java is enabled!<br>");
+	}
+	else
+	{
+		document.write("Java is disabled!<br>");
+	}
+	document.write("Browser Platform: " + navigator.platform + "<br>");
+	document.write("Browser Code name: " + navigator.appCodeName + "<br>");
+	document.write("Browser Name: " + navigator.appName + "<br>");
+	document.write("Browser Version: " + navigator.appVersion + "<br><br><br><br>");
+	document.write("Person's Properties:<br>");
+	document.write(myPerson.fullName + "<br>");
+	document.write(myPerson.age + "<br>");
+	document.write(myPerson.gender + "<br>");
+	myPerson.expect();
+	document.write(myPerson.lifeExpect + "<br><br>");
+	document.write("Hi " + myPerson.fullName + ", as a " + myPerson.age + " year old " + myPerson.genderName + " you are expected to live " + myPerson.lifeExpect + " more years!");
+	</script>
+</body>
+</html>

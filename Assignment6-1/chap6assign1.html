@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Chapter 6 Assignment 1</title>
+	<style>
+		html{
+			background-color: grey;
+		}
+	</style>
+	<script>
+		var grade1 = +prompt("Please Enter Your Grade For Exam 1");
+		var grade2 = +prompt("Please Enter Your Grade For Exam 2");
+		var grade3 = +prompt("Please Enter Your Grade For Exam 3");
+		var avgGrade;
+		var letterGrade;
+	</script>
+</head>
+<body>
+	<script>
+		document.write("Your 3 exam scores are:<br>");
+		document.write("Exam 1: " + grade1 + "<br>");
+		document.write("Exam 2: " + grade2 + "<br>");
+		document.write("Exam 3: " + grade3 + "<br>");
+		avgGrade = (grade1 + grade2 + grade3)/3;		
+		avgGrade = avgGrade.toFixed(0)
+		document.write("Average: " + avgGrade + "<br>");
+		if(avgGrade <= 100 && avgGrade > 90)
+		{
+			letterGrade = 'A';
+		}
+		else if(avgGrade < 91 && avgGrade > 80)
+		{
+			letterGrade = 'B';
+		}
+		else if(avgGrade < 81 && avgGrade > 70)
+		{
+			letterGrade = 'C';
+		}
+		else if(avgGrade < 71 && avgGrade > 64)
+		{
+			letterGrade = 'D';
+		}
+		else if(avgGrade  < 65)
+		{
+			letterGrade = 'F';
+		}
+		switch(true) 
+		{
+			case (letterGrade == 'A'):
+			document.write("Course grade: " + letterGrade + "<br>");
+			document.write("Great job, keep it up");
+			break;
+			case (letterGrade == 'B'):
+			document.write("Course grade: " + letterGrade + "<br>");
+			document.write("Very nice work");
+			break;
+			case (letterGrade == 'C'):
+			document.write("Course grade: " + letterGrade + "<br>");
+			document.write("You can do it, keep studying");
+			break;
+			case (letterGrade == 'D'):
+			document.write("Course grade: " + letterGrade + "<br>");
+			document.write("You need some help, please see a teacher");
+			break;
+			case (letterGrade == 'F'):
+			document.write("Course grade: " + letterGrade + "<br>");
+			document.write("Please schedule an appointment with your advisor");
+			break;
+			default :
+			document.write("Course grade: S++<br>");
+			document.write("You may be cheating");
+		}
+	</script>
+</body>
+</html>

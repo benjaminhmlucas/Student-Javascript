@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 10 Assignment</title>
+	<script>
+		
+	</script>
+</head>
+<body id="body">
+	<h1>Event Handlers At Work!</h1>
+	<h3>By <i>Ben Lucas</i></h3>
+	<ol type="a">
+		<li><a id="link" href="https://www.google.com/">Search Here</a><br><br></li>
+		<li><button type="button" id="button1">Click Me!</button></li><br>
+		<li>
+			<form>
+				<label>My name is: </label><input id="textInput" value="Sam" type="text" style="display: inline;"> Go ahead, change my name.
+			</form><br>
+		</li>
+		<li><button type="button" id="button2">Reload</button></li><br>
+		<li><button type="button" id="button3">My Favorite Site</button></li><br>
+	</ol>
+	<script>
+		window.addEventListener("load",function()
+			{
+
+				link.addEventListener("mouseover",function()
+					{
+						body.style.backgroundColor="green";
+					},false);
+				link.addEventListener("mouseout",function()
+					{
+						body.style.backgroundColor="white";
+					},false);
+				button1.addEventListener("click",function()
+					{
+						alert("You Clicked Me!")
+					},false)
+				textInput.addEventListener("change",function()
+					{
+						textInput.addEventListener("blur",function()
+						{
+							alert("Name was chagned to: " + textInput.value)
+						},false)
+					},false)
+				button2.addEventListener("click",function()
+					{
+						location.reload();
+					},false)
+				button3.addEventListener("click",function()
+					{
+						window.open("https://www.instagram.com/benjaminhmlucas/");
+					},false)
+			},false);
+	</script>
+</body>
+</html>

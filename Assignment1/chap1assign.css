@@ -1,0 +1,28 @@
+body{
+	background: url(images/ocean1.jpg);
+	background-attachment: fixed;
+	background-size: 100%;
+	text-align: center;
+	width: 100%;
+	position: relative;
+}
+section{
+	width:25%;
+}
+aside{
+	width: 60%;
+}
+section, aside{
+	top: 25px;
+	float: center;
+	background: rgba(232,242,243,.7);
+	border: 3px solid rgba(165,166,135,.7);
+	margin: 10% auto; 
+	padding: 20px; 
+}
+aside img{
+	width:100%;
+}
+p{
+	font-family: georgia;
+}

@@ -1,0 +1,11 @@
+document.write("<b>I Heart Huckabees</b>");
+document.write("I Heart Hucvkabees is a movie that broaches the");
+document.write("subject of existentialism.  It follows multiple story");
+document.write("lines as the characters that inhabit them loose the");
+document.write("perspectives of their lives they once had.  There are");
+document.write("two 'existential detectives' that are employed by the");
+document.write("characters to help them answer questions about life or");
+document.write("understand odd occurences.  This however leads to the");
+document.write("detectives changing how there employers view their lives");
+document.write("and ultimately causing them to become happier and more ");
+document.write("self aware.");

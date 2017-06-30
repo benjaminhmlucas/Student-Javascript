@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Chapter 6 Assignment 2</title>
+	<style>
+		html{
+			background-color: tan;
+		}
+	</style>
+	<script>
+		var carPrice = +prompt("Please enter vehicle price");
+		var downPayment = +prompt("Please enter down payment amount");
+		var annualInterest = +prompt("Please enter annual interest rate");
+		var loanAmount = carPrice - downPayment;
+		var monthInterest = annualInterest/1200;
+		var loanLengthMonth = 24;
+		var payment;
+		function calcLoan(monInt, loanMonth, loanAmnt)
+		{
+			var base = Math.pow(1 + monInt, loanMonth);
+			var paymentMnth = loanAmnt * monInt / (1 - (1/base));
+			return paymentMnth;
+		}
+		function numberWithCommas(x) {
+    	var maxLength = 10;
+		var parts = x.toString().split(".");
+    	parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+   		parts.join(".");
+		parts = "$" + parts;
+		while (parts.length < maxLength){
+	        parts = ' ' + parts;
+		}
+		return parts;
+		}
+	</script>
+</head>
+<body>
+	
+	<script>
+		document.write("<h1>Loan Calculator</h1>");
+		document.write("Vehicle price: " +  numberWithCommas(carPrice.toFixed(2)) + "<br>");
+		document.write("Down payment: " +  numberWithCommas(downPayment.toFixed(2)) + "<br>");
+		document.write("Interest Rate: " + annualInterest.toFixed(1) + "%<br>");
+		document.write("Loan Amount: " +  numberWithCommas(loanAmount.toFixed(2)) + "<br>");
+		document.write("<pre>");
+		document.write("# of Months       Payment/month<br><br>");	
+		for(var count = 1; count < 5; count++, loanLengthMonth += 12)
+		{
+			payment = calcLoan(monthInterest, loanLengthMonth, loanAmount);
+			document.write("    " + loanLengthMonth + "                " +  numberWithCommas(payment.toFixed(2)) + "<br>");
+		}
+		document.write("</pre>");
+	</script>
+</body>
+</html>

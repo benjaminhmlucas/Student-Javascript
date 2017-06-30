@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Chapter 7 Assignment</title>
+	<script>
+		var books = ["War and Peace","Huckleberry Finn","The Return of The Native","A Christmas Carol","Exodus"];
+		var authors = [];
+		var author_title = [];
+		for(count = 0; count < books.length; count++)
+		{
+			authors[count] = prompt("Please Enter The Author of " + books[count] + ":")
+		}
+	</script>
+</head>
+<body>
+	<script>
+		document.write("**********************************************<br>");
+		for(count = 0; count < books.length; count++)
+		{
+			document.write("<b>Book: </b>" +  books[count] + " <b> Author: </b>" + authors[count] + "<br>");
+		}
+		document.write("**********************************************<br>");
+		for(count = 0; count < books.length; count++)
+		{
+			author_title[count] = authors[count] + " wrote " + books[count];
+		}
+		for(count = 0; count < author_title.length; count++)
+		{
+			document.write(author_title[count] + "<br>");
+		}
+		document.write("**********************************************<br>");
+		author_title.pop();
+		for(count = 0; count < author_title.length; count++)
+		{
+			document.write(author_title[count] + "<br>");
+		}
+		document.write("**********************************************<br>");
+		author_title.sort();
+		for(count = 0; count < author_title.length; count++)
+		{
+			document.write(author_title[count] + "<br>");
+		}
+	</script>
+</body>
+</html>
