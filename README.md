@@ -1,5 +1,5 @@
 # Student-Javascript
-
+Link to folder for Live Pages @ http://benjaminhmlucas.com/JavaScript<br>
 1-HTML/CSS basics<br>
 2-Favorite movie - console output<br>
 3-Job description - input/output handling<br>
