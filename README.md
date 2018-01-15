@@ -1,4 +1,5 @@
 # Student-Javascript
+Live site: http://benjaminlucaswebdesign.com/javascript.html<br>
 1-HTML/CSS basics<br>
 2-Favorite movie - console output<br>
 3-Job description - input/output handling<br>
